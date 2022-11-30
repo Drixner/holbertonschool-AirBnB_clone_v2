@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Script to start flask web application"""
-from flask import Flask
+from flask import Flask, abort
 app = Flask(__name__)
 
 
@@ -23,7 +23,6 @@ def varible_text(text=""):
     return "C {}".format(text)
 
 
-@app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def python_text(text="is cool"):
     """Return messages"""
