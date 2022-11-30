@@ -16,11 +16,11 @@ def hello_HBNB():
     return "HBNB"
 
 
-@app.route("/c/<string:text>", strict_slashes=False)
-def varible_text(text):
+@app.route("/c/<text>", strict_slashes=False)
+def varible_text(text=""):
     """Return messages"""
-    new_text = text.replace('_', ' ')
-    return ('C {:s}'.format(escape(new_text)))
+    text = text.replace("_", " ")
+    return "C {}".format(text)
 
 
 if __name__ == '__main__':
