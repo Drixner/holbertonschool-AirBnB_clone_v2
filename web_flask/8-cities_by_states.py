@@ -2,7 +2,7 @@
 """Script to starts a Flask web application and use storage
 for fetching data from the storage engine"""
 from flask import Flask, render_template
-#from markupsafe import escape
+# from markupsafe import escape
 from models.state import State
 from models.city import City
 from models import storage
