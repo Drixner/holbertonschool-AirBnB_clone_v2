@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Script to starts web application and use storage
+for fetching data from the storage engine"""
 from flask import Flask, render_template
 from markupsafe import escape
 from models.state import State
