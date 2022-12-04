@@ -11,14 +11,14 @@ app = Flask(__name__)
 def n_template():
     """Render a template"""
     states = list(storage.all(State).values())
-    return render_template('7-state_list.html', states=states)
+    return render_template('7-states_list.html', states=states)
 
 
 @app.teardown_appcontext
 def close_session(self):
-    """This method remove the current SQLAlchemy close_sessio`n"""
+    """This method remove the current SQLAlchemy close_session"""
     storage.close()
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)
